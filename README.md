@@ -13,6 +13,8 @@ assets/Expense tracker light theme.png
 
 https://github.com/amal196/Spendwise-expense-tracker/blob/main/assets/Expense%20tracker%20Dark%20theme.png
 
+![Dark Theme](assets/Expense tracker Dark theme.png)
+
 
 ## Project Type
 
