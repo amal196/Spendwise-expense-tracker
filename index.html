@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="app-header">
+            <div class="brand">
+                <span class="brand-mark">🌿</span>
+                <div>
+                    <h1>SpendWise</h1>
+                    <p class="tagline">Track. Save. Grow.</p>
+                </div>
+            </div>
+            <button id="themeToggle">🌙 Dark Mode</button>
+        </header>
+
+        <div class="dashboard-grid">
+
+            <div class="row row-top">
+
+                <div class="dashboard-left">
+
+                    <section class="balance-section">
+                        <h3>Available Balance</h3>
+                        <h2 id="balance">₹0</h2>
+                    </section>
+
+                    <section class="summary-section">
+                        <div class="card income">
+                            <span class="card-icon">💰</span>
+                            <div>
+                                <h3>Income</h3>
+                                <p id="incomeAmount">₹0</p>
+                            </div>
+                        </div>
+                        <div class="card expense">
+                            <span class="card-icon">💳</span>
+                            <div>
+                                <h3>Expense</h3>
+                                <p id="expenseAmount">₹0</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <p id="messageBox" class="message-box">💡 Add your income first for accurate balance tracking.</p>
+
+                </div>
+
+                <div class="dashboard-right">
+
+                    <section class="transaction-form">
+                        <h2>➕ Add Transaction</h2>
+
+                        <form>
+                            <div class="form-row form-row-4">
+                                <div class="field">
+                                    <label for="title">Title</label>
+                                    <input type="text" id="title" placeholder="Enter title">
+                                </div>
+                                <div class="field">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" placeholder="Enter amount">
+                                </div>
+                                <div class="field">
+                                    <label for="type">Type</label>
+                                    <select id="type">
+                                        <option value="income">Income</option>
+                                        <option value="expense">Expense</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="category">Category</label>
+                                    <select id="category">
+                                        <option value="Food">Food</option>
+                                        <option value="Travel">Travel</option>
+                                        <option value="Shopping">Shopping</option>
+                                        <option value="Bills">Bills</option>
+                                        <option value="Entertainment">Entertainment</option>
+                                        <option value="Salary">Salary</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit">+ Add Transaction</button>
+                        </form>
+                    </section>
+
+                </div>
+
+            </div>
+
+            <div class="row row-stats">
+
+                <div class="analytics-card">
+                    <span class="icon-badge badge-purple">📊</span>
+                    <h3 id="totalTransactions">0</h3>
+                    <p>Total Transactions</p>
+                </div>
+
+                <div class="analytics-card">
+                    <span class="icon-badge badge-orange">🏷️</span>
+                    <h3 id="topCategory">-</h3>
+                    <p>Top Category</p>
+                </div>
+
+                <div class="analytics-card">
+                    <span class="icon-badge badge-blue">💸</span>
+                    <h3 id="averageExpense">₹0</h3>
+                    <p>Average Expense</p>
+                </div>
+
+                <div class="analytics-card">
+                    <span class="icon-badge badge-teal">🥧</span>
+                    <h3 id="budgetUsedPercent">–</h3>
+                    <p>Budget Used</p>
+                </div>
+
+                <section class="budget-section">
+                    <div class="budget-head">
+                        <h2>🎯 Monthly Budget</h2>
+                        <span id="budgetTotalDisplay" class="budget-total"></span>
+                    </div>
+
+                    <div class="budget-input-row">
+                        <input type="number" id="budgetInput" placeholder="Enter monthly budget">
+                        <button id="setBudgetBtn">Set Budget</button>
+                    </div>
+
+                    <p id="budgetStatus">No budget set.</p>
+
+                    <div class="progress-container">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <div class="budget-footline">
+                        <span>Spent: <strong id="budgetSpent">₹0</strong></span>
+                        <span>Remaining: <strong id="budgetRemaining">₹0</strong></span>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="row row-bottom">
+
+                <section class="chart-section">
+                    <h2>📊 Expense Breakdown</h2>
+                    <div class="chart-body">
+                        <div class="chart-canvas-wrap">
+                            <canvas id="expenseChart"></canvas>
+                        </div>
+                        <div id="chartLegend"></div>
+                    </div>
+                </section>
+
+                <section class="insights-section">
+                    <h2>💡 Smart Insights</h2>
+                    <div id="insightsContainer">
+                        <p>Start adding transactions...</p>
+                    </div>
+                </section>
+
+                <section class="transaction-list">
+                    <div class="transaction-header">
+                        <h2>📋 Transactions</h2>
+                        <button id="exportBtn">Export CSV</button>
+                    </div>
+
+                    <div class="filter-buttons">
+                        <button id="allBtn" class="active">All</button>
+                        <button id="incomeBtn">Income</button>
+                        <button id="expenseBtn">Expense</button>
+                    </div>
+
+                    <input type="text" id="searchInput" placeholder="Search transactions...">
+
+                    <ul id="transactionList"></ul>
+                </section>
+
+            </div>
+
+        </div>
+
+        <footer class="app-footer">© 2026 SpendWise. All rights reserved.</footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>
