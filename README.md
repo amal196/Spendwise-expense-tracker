@@ -11,6 +11,8 @@ A responsive expense tracking application built using HTML, CSS and JavaScript.
 
 assets/Expense tracker light theme.png
 
+https://github.com/amal196/Spendwise-expense-tracker/blob/main/assets/Expense%20tracker%20Dark%20theme.png
+
 
 ## Project Type
 
