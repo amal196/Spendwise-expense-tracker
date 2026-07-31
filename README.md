@@ -1,6 +1,11 @@
+
 # SpendWise - Smart Expense Tracker
 
-A frontend expense tracking application built using HTML, CSS and JavaScript.
+A responsive expense tracking application built using HTML, CSS and JavaScript.
+
+## Live Demo
+
+🔗 https://amal196.github.io/Spendwise-expense-tracker/
 
 ## Project Type
 
@@ -10,15 +15,15 @@ Frontend Portfolio Project
 
 - Add Income and Expenses
 - Monthly Budget Management
-- Balance Tracking
+- Real-time Balance Tracking
 - Expense Analytics Dashboard
 - Expense Breakdown Charts
 - CSV Export
-- Dark / Light Mode
+- Dark / Light Theme
 - Local Storage Support
 - Responsive Design
 
-## Technologies Used
+## Tech Stack
 
 - HTML5
 - CSS3
@@ -27,7 +32,14 @@ Frontend Portfolio Project
 
 ## Purpose
 
-This project was developed as part of my frontend development portfolio to demonstrate JavaScript DOM manipulation, local storage management, data visualization, and responsive UI design skills.
+This project was built to demonstrate my practical frontend development skills including:
+
+- JavaScript DOM Manipulation
+- Local Storage Integration
+- Dynamic Data Rendering
+- Data Visualization
+- Responsive UI Design
+- User Experience Enhancement
 
 ## Author
 
