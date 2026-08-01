@@ -9,13 +9,11 @@ A responsive expense tracking application built using HTML, CSS and JavaScript.
 
 ## Screenshots
 
-### Light Theme
 
-![Light Theme](assets/Expense tracker light theme.png)
+![Light Theme](assets/light-theme.png)
 
-### Dark Theme
+![Dark Theme](assets/dark-theme.png)
 
-![Dark Theme](assets/Expense tracker Dark theme.png)
 
 ## Project Type
 
