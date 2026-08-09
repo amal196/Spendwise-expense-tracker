@@ -40,7 +40,7 @@ Frontend Portfolio Project
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- Local Storage API
+- Local Storage
 
 ## Purpose
 
